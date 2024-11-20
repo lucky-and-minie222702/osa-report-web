@@ -5,17 +5,11 @@ function toggleView() {
 		const eleContainer = document.getElementById("pdf-container");
 
 		if (btn.textContent == "View horizontally") {
-			for (var i = 0; i < elePages.length; i++) {
-				elePages[i].style.marginLeft = "100px";
-				elePages[i].style.marginRight = "100px";
-			}
+			eleContainer.setAttribute("style", "transform-origin: top left");
 			eleContainer.style.flexDirection = "row";
 			eleContainer.style.alignItems = "normal";
 		} else {
-			for (var i = 0; i < elePages.length; i++) {
-				elePages[i].style.marginRight = "0px";
-				elePages[i].style.marginLeft = "0px";
-			}
+			eleContainer.setAttribute("style", "transform-origin: top");
 			eleContainer.style.flexDirection = "column";
 			eleContainer.style.alignItems = "center";
 		}
