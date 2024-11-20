@@ -13,7 +13,7 @@
 		},
 		{
 			"src": "/uploads/(.*)",
-			"dest": "/uploads/$1",
+			"dest": "/uploads/$1"
 		}
 	]
 }
