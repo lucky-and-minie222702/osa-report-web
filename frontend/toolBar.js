@@ -7,11 +7,9 @@ function toggleView() {
 		if (btn.textContent == "View horizontally") {
 			eleContainer.setAttribute("style", "transform-origin: top left");
 			eleContainer.style.flexDirection = "row";
-			eleContainer.style.alignItems = "normal";
 		} else {
-			eleContainer.setAttribute("style", "transform-origin: top");
+			eleContainer.removeAttribute("style", "transform-origin");
 			eleContainer.style.flexDirection = "column";
-			eleContainer.style.alignItems = "center";
 		}
 
 		if (btn.textContent == "View horizontally")
