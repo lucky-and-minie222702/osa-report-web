@@ -17,10 +17,6 @@
 	gap: 100px;
 }
 
-.wrapper-pages {
-	width: 100%;
-}
-
 .report-pages {
 	/* filter: invert(1) hue-rotate(180deg) brightness(1.2); */
 	display: flex;
