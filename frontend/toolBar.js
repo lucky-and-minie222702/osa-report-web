@@ -6,8 +6,8 @@ function toggleView() {
 
 		if (btn.textContent == "View horizontally") {
 			for (var i = 0; i < elePages.length; i++) {
-				elePages[i].style.marginLeft = "15px";
-				elePages[i].style.marginRight = "15px";
+				elePages[i].style.marginLeft = "100px";
+				elePages[i].style.marginRight = "100px";
 			}
 			eleContainer.style.flexDirection = "row";
 			eleContainer.style.alignItems = "normal";

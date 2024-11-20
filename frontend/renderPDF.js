@@ -1,4 +1,4 @@
-const url = "report.pdf";
+const url = "/uploads/report.pdf";
 const pdfjsLib = window["pdfjs-dist/build/pdf"];
 pdfjsLib.GlobalWorkerOptions.workerSrc =
 	"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
@@ -13,7 +13,12 @@ function renderPage(page, scale) {
 	canvas.width = viewport.width;
 	canvas.height = viewport.height;
 	canvas.setAttribute("class", "report-pages");
-	container.appendChild(canvas);
+
+	const wrapper = document.createElement("div");
+	wrapper.classList.add("wrapper-pages");
+	wrapper.appendChild(canvas);
+
+	container.appendChild(wrapper);
 
 	const renderContext = {
 		canvasContext: ctx,
@@ -25,7 +30,7 @@ function renderPage(page, scale) {
 pdfjsLib
 	.getDocument(url)
 	.promise.then((pdf) => {
-		const scale = 1.5;
+		const scale = 4;
 		for (let i = 1; i <= pdf.numPages; i++) {
 			pdf.getPage(i).then((page) => renderPage(page, scale));
 		}
