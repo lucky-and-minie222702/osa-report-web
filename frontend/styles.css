@@ -1,7 +1,10 @@
+#app {
+	background-color: white !important;
+}
+
 .app {
 	position: absolute;
 	width: 100%;
-	background-color: white;
 }
 
 .pdf-container {
@@ -23,11 +26,12 @@
 }
 
 .tool-bar {
-	position: sticky;
+	position: fixed;
 	display: flex;
 	gap: 20px;
 	margin-top: 15px;
 	margin-left: 25px;
 	width: 100%;
 	top: 0;
+	z-index: 1;
 }

@@ -35,20 +35,23 @@ function toggleAppearance() {
 
 		if (btn.textContent == "Dark mode") {
 			for (var i = 0; i < elePages.length; i++) {
-				elePages[i].style.filter = "invert(1)";
+				elePages[i].setAttribute(
+					"style",
+					"filter: invert(1) hue-rotate(180deg) brightness(1.2);"
+				);
 			}
 			for (var i = 0; i < eleBtn.length; i++) {
 				eleBtn[i].classList.add("btn-dark");
 			}
-			app.style.backgroundColor = "black";
+			app.setAttribute("style", "background-color: black !important");
 		} else {
 			for (var i = 0; i < elePages.length; i++) {
-				elePages[i].style.filter = "inherit";
+				elePages[i].style.filter = "none";
 			}
 			for (var i = 0; i < eleBtn.length; i++) {
 				eleBtn[i].classList.remove("btn-dark");
 			}
-			app.style.backgroundColor = "white";
+			app.setAttribute("style", "background-color: white !important");
 		}
 
 		if (btn.textContent == "Dark mode") btn.textContent = "Light mode";
