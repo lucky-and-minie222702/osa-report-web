@@ -1,0 +1,23 @@
+body {
+	/* background-color: #a2d2df; */
+}
+
+.app {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.pdf-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 20px;
+}
+canvas {
+	margin: 10px 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.report-pages {
+}
